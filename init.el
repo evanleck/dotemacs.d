@@ -205,8 +205,7 @@
 
 ;; https://github.com/preetpalS/emacs-dotenv-mode
 (use-package dotenv-mode
-  :init
-  (add-to-list 'auto-mode-alist '("\\.env\\..*\\'" . dotenv-mode)))
+  :mode "\\.env\\'")
 
 (use-package editorconfig
   :diminish editorconfig-mode
@@ -415,12 +414,10 @@
   :init
   (setq web-mode-enable-auto-pairing nil)
 
-  :mode (("\\.erb\\'" . web-mode)
-         ("\\.html\\'" . web-mode)
-         ("\\.html\\.erb\\'" . web-mode)))
+  :mode ("\\.erb\\'" "\\.html\\'" "\\.html\\.erb\\'"))
 
 (use-package yaml-mode
-  :mode (("\\.yml\\'" . yaml-mode)))
+  :mode "\\.yml\\'")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
