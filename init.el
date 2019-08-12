@@ -77,7 +77,7 @@
 (setq inhibit-startup-screen t)
 
 ;; Don't calculate this dynamically.
-(setq-default display-line-numbers-width 4)
+(setq-default display-line-numbers-width 3)
 
 ;; Like vim's magic relative line numbers.
 (setq-default display-line-numbers-type 'relative)
@@ -227,10 +227,10 @@
     "p" 'helm-projectile-switch-project
     "q" 'delete-window
     "r" 'helm-etags-select
-    "sp" 'split-window-vertically
     "t" 'helm-projectile
-    "vs" 'split-window-horizontally
-    "w" 'save-buffer))
+    "v" 'split-window-horizontally
+    "w" 'save-buffer
+    "x" 'split-window-vertically))
 
 (use-package evil-surround
   :config
